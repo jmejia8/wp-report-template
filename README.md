@@ -9,4 +9,4 @@
 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
 * Text Domain: gaming
 
-<img src="https://raw.githubusercontent.com/jmejia8/wp-gaming-template/master/screenshot.png"/>  
+<img src="https://raw.githubusercontent.com/jmejia8/wp-report-template/master/screenshot.png"/>  
