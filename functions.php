@@ -145,3 +145,19 @@ function gaming_excerpt_length( $length ) {
 }
 
 add_filter( 'excerpt_length', 'gaming_excerpt_length', 999 );
+
+function my_login_logo_one() { 
+	?> 
+	<style type="text/css"> 
+	body.login div#login h1 a {
+	background-image: url(<?php bloginfo('template_url');?>/img/logo.png);  
+	background-position: center;
+	background-color: #E6E6E6;
+	border: 1px solid #C0C0C0;
+	padding: 20px; 
+	} 
+	</style>
+	<?php 
+}
+
+add_action( 'login_enqueue_scripts', 'my_login_logo_one' );
