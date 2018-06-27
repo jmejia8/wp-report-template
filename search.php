@@ -21,7 +21,7 @@ get_header();
 	// The Query
 	$the_query = new WP_Query( $args );
 	
-	if ( $the_query->have_posts() ) {
+	if ( strlen($s) != 0 & $the_query->have_posts() ) {
 	        _e("<h2><span class='red'>Search Results for: </span> ".get_query_var('s')."</h2>");
 
 ?>
@@ -73,11 +73,10 @@ get_header();
 
 
 <?php
-	        }
+}
 
-?>
-</div>
-<?php
+}elseif (strlen($s) == 0) {
+	
 	}else{
 ?>
 
@@ -86,9 +85,11 @@ get_header();
 <div>
 	<p>Sorry, but nothing matched your search criteria. Please try again with some different keywords.</p>
 </div>
-
+<?php 
+} ?>
+</div>
 <?php
-}
+
 
 get_footer();
 ?>
