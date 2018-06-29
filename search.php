@@ -14,7 +14,7 @@ get_header();
 	get_search_form();
 
 	$s=get_search_query();
-	$args = array(
+	$args = array('post_type' => 'post',
 	                's' =>$s
 	            );
 	
