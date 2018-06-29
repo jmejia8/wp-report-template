@@ -11,24 +11,27 @@
 					the_post_thumbnail();
 				} ?>
 			</div>
-			
-			<?php
-				the_title( "<h1>", "</h1>" );
-			?>
 
-			<div class="post-info">
-				<a href="<?php echo get_day_link( get_the_time('Y') , get_the_time('m') , get_the_time('d') ); ?>">
-					<i class="fa fa-calendar"></i>
-					<?php echo get_the_date(); ?>
-				</a>
 
-				<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' )); ?>">
-					<i class="fa fa-user"></i>
-					<?php the_author(); ?>
-				</a>
+			<div class="report-content">
+				<?php
+					the_title( "<h1>", "</h1>" );
+				?>
+
+				<div class="post-info">
+					<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' )); ?>">
+						<!-- <i class="fa fa-user"></i> -->
+						<?php the_author(); ?>
+					</a>
+					<a href="<?php echo get_day_link( get_the_time('Y') , get_the_time('m') , get_the_time('d') ); ?>">
+						<!-- <i class="fa fa-calendar"></i> -->
+						<?php echo get_the_date(); ?>
+					</a>
+
+				</div>
+				
+				<?php the_content(); ?>
 			</div>
-			
-			<?php the_content(); ?>
 
 			 <?php
 				// If comments are open or we have at least one comment, load up the comment template.
